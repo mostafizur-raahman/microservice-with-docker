@@ -1,0 +1,28 @@
+{
+    "name": "focker-as-docker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "run": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mostafizur-raahman/Focker-as-docker.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/mostafizur-raahman/Focker-as-docker/issues"
+    },
+    "homepage": "https://github.com/mostafizur-raahman/Focker-as-docker#readme",
+    "dependencies": {
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "ioredis": "^5.10.1",
+        "redis": "^5.12.1"
+    }
+}

@@ -1,0 +1,27 @@
+version: "3.8" # Optional: Compose V2 ignores this, safe to remove
+
+services:
+    web:
+        build: .
+        ports:
+            - "8000:8000"
+        networks:
+            - counter-net
+        depends_on:
+            redis:
+                condition: service_healthy
+        environment:
+            - NODE_ENV=production
+
+    redis:
+        image: redis:alpine
+        networks:
+            - counter-net
+        healthcheck:
+            test: ["CMD", "redis-cli", "ping"]
+            interval: 5s
+            timeout: 3s
+            retries: 5
+
+networks:
+    counter-net:
